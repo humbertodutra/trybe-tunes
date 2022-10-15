@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/header.css';
+import LogoImg from '../images/logo-header.png';
 
 class Header extends Component {
   constructor(props) {
@@ -23,25 +25,31 @@ class Header extends Component {
     const { name } = this.state;
     return (
 
-      <header data-testid="header-component">
+      <header className="header" data-testid="header-component">
         { name !== ''
           ? (
             <>
+            <section className="top-header">
+              <img src={LogoImg} alt="trybetunes" className='logo-header'/>
               <div
+                className='user-button'
                 data-testid="header-user-name"
               >
-                { name }
+                <p>{ name }</p>
               </div>
+            </section>  
               <div>
-                <Link to="/search" data-testid="link-to-search">
+                <nav className="navigation">
+                <Link to="/search" data-testid="link-to-search" className="link-nav">
                   Pesquisar
                 </Link>
-                <Link to="/favorites" data-testid="link-to-favorites">
+                <Link to="/favorites" data-testid="link-to-favorites" className="link-nav favorites-nav">
                   Favoritos
                 </Link>
-                <Link to="/profile" data-testid="link-to-profile">
+                <Link to="/profile" data-testid="link-to-profile" className="link-nav">
                   Perfil
                 </Link>
+                </nav>
               </div>
             </>
           )
