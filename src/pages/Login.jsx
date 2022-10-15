@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
 import Loading from '../Components/Loading';
+import '../styles/login.css'
+import LogoTunes from '../images/logo-trybetunes.png'
 
 class Login extends React.Component {
   constructor(props) {
@@ -13,7 +15,6 @@ class Login extends React.Component {
   redirect() {
     const { history } = this.props;
     history.push('/search');
-    console.log('foi');
   }
 
   render() {
@@ -23,19 +24,26 @@ class Login extends React.Component {
     const { redirect } = this;
     return !isAuthenticated
       ? (
-        <div data-testid="page-login">
-          <form onSubmit={ (event) => event.preventDefault() }>
-            <label htmlFor="name">
-              Digite seu nome:
+    <div data-testid="page-login" className="login-page">    
+      <section className="login-rectangle">  
+        <img
+          className="logo-trybe-tunes"
+          src={ LogoTunes }
+          alt="logo-trybetunes"
+        />
+        <div className="form-rectangle" data-testid="page-login">
+          <form className='login-form'onSubmit={ (event) => event.preventDefault() }>
               <input
                 data-testid="login-name-input"
                 name="name"
+                className="login-input"
                 value={ name }
+                placeholder="name"
                 onChange={ handleInputChange }
               />
-            </label>
-            <input
+            <button
               data-testid="login-submit-button"
+              className="btn"
               type="submit"
               value="Entrar"
               disabled={ name.length < minName }
@@ -44,10 +52,13 @@ class Login extends React.Component {
                 const isLogged = await createUser({ name });
                 this.setState((state) => ({ isAuthenticated: !state.isAuthenticated }));
                 return isLogged === 'OK' && redirect();
+              
               } }
-            />
+            > Join </button>
           </form>
         </div>
+    </section>  
+    /</div>
       )
       : (
         <Loading />);
