@@ -14,7 +14,7 @@ class Header extends Component {
     };
   }
 
-  async componentDidMount() {
+componentDidMount() {
     getUser()
       .then(({ name }) => (
         this.setState({ name })

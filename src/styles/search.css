@@ -19,7 +19,7 @@
     flex-direction: column;
     margin-right: 27px;
     padding: 12px 16px;
-    width: 419px;
+    width: 300px;
   }
   
   .search-button {
@@ -41,8 +41,9 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 40px 50px;
+    margin: auto;
     max-width: 1370px;
+  
   }
   
   .link-album-card {
@@ -54,7 +55,12 @@
     font-family: Epilogue , sans-serif;
     font-size: 24px;
     font-weight: 300;
-    margin-left: 10%;
+    align-self: left;
+    display: flex;
+    justify-content: left;
+    margin-left: 18%;
+    margin-bottom: 3%;
+
   }
   
   .div-not-found {

@@ -17,6 +17,7 @@ class Search extends Component {
       searchedArtist: '',
       loading: false,
       albums: [],
+      artistNameToDisplay: '',
     };
   }
 
@@ -48,13 +49,13 @@ class Search extends Component {
 
   newState(){
     const { albums } = this.state;
-    this.setState({artist: albums[0].artistName })
+    this.setState({artistNameToDisplay: albums[0].artistName })
 
 
   }
 
   render() {
-    const { artist, loading, albums, searchedArtist } = this.state;
+    const { artist, artistNameToDisplay, loading, albums, searchedArtist } = this.state;
     
     const albumsList = albums.map((album, key) => (
     <li>
@@ -64,7 +65,7 @@ class Search extends Component {
         to={ `/album/${album.collectionId}` }
       >
         <AlbumThumbnail
-          name={ artist }
+          name={ artistNameToDisplay }
           collectionName={ album.collectionName }
           price={ album.collectionPrice }
           img={ album.artworkUrl100 }
