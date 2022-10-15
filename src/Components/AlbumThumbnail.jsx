@@ -1,25 +1,30 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import '../styles/albumThumbnail.css'
+
 
 class AlbumThumbnail extends Component {
   render() {
     const {
-      artist,
+      name,
       collectionName,
-      price,
       img,
-      releaseDate,
+    
     } = this.props;
 
     return (
-      <>
-        <img src={ img } alt={ `Cover From ${collectionName}` } />
-        <h7 data-testid="artist-name">{artist}</h7>
-        <p data-testid="album-name">{collectionName}</p>
-        <p>{`Price: $${price}`}</p>
-        <p>{`Released Date: ${new Date(releaseDate).toLocaleDateString('en')}`}</p>
-
-      </>
+      
+    <section className="album-card">
+      <div className='album-image'>
+          <img src={ img } alt={ `Cover From ${collectionName}` } />
+            </div>
+      <div className="artist-info">
+        <span data-testid="album-name">{collectionName}</span>
+        <p data-testid="artist-name">{ name }</p>
+   
+        </div>
+    </section>
+      
     );
   }
 }

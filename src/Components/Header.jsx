@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import '../styles/header.css';
-import LogoImg from '../images/logo-header.png';
+import LogoImg from '../images/logo-trybetunes.png';
 
 class Header extends Component {
   constructor(props) {
@@ -41,13 +41,13 @@ class Header extends Component {
               <div>
                 <nav className="navigation">
                 <Link to="/search" data-testid="link-to-search" className="link-nav">
-                  Pesquisar
+                  Search
                 </Link>
                 <Link to="/favorites" data-testid="link-to-favorites" className="link-nav favorites-nav">
-                  Favoritos
+                  Favorites
                 </Link>
                 <Link to="/profile" data-testid="link-to-profile" className="link-nav">
-                  Perfil
+                  Profile
                 </Link>
                 </nav>
               </div>

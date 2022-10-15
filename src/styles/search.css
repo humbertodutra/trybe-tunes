@@ -1,0 +1,67 @@
+.search-page {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .form-search {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding: 99px 0 112px;
+  }
+  
+  .input-search {
+    align-items: flex-start;
+    border: 1px solid #3d495c;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 27px;
+    padding: 12px 16px;
+    width: 419px;
+  }
+  
+  .search-button {
+    align-items: center;
+    background: #00e5b0;
+    border-radius: 2px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana , Geneva , Tahoma , sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    padding: 8px 32px;
+    width: 134px;
+  }
+  
+  .album-list {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 40px 50px;
+    max-width: 1370px;
+  }
+  
+  .link-album-card {
+    text-decoration: none;
+  }
+  
+  .span-albuns-found {
+    color: #001813;
+    font-family: Epilogue , sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 10%;
+  }
+  
+  .div-not-found {
+    align-self: center;
+    color: #023031;
+    font-family: Epilogue , sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 200px;
+  }
