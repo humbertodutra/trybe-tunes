@@ -33,6 +33,10 @@ class Album extends Component {
 
   }
 
+  componentDidMount(){
+    getFavoriteSongs().then((fav) => this.setState({ favsongs: [...fav] }));
+  }
+
   componentWillUnmount() {
     this.setState({
       favsongs: [],
