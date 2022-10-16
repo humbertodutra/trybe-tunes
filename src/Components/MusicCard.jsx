@@ -31,7 +31,6 @@ class MusicCard extends Component {
       !loading && (
         <section className="track-section">
          
-            
               <audio data-testid="audio-component" src={previewUrl} controls>
                 <track kind="captions" />
               </audio>

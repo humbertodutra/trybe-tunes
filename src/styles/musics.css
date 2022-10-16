@@ -48,7 +48,11 @@
 
 }
 
-.ulS {
-    background-color: lightblue;
-    overflow-y: scroll;
+
+.track-list-fav {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 80%;
 }
+

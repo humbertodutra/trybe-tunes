@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../Components/Header';
-import Loading from '../Components/Loading';
-import { getUser } from '../services/userAPI';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Header from "../Components/Header";
+import Loading from "../Components/Loading";
+import { getUser } from "../services/userAPI";
+import "../styles/profile.css";
 
 class Profile extends Component {
   constructor(props) {
@@ -12,6 +13,10 @@ class Profile extends Component {
       loading: false,
     };
   }
+
+  uppercase = (word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  };
 
   componentDidMount() {
     this.setState({ loading: true });
@@ -27,39 +32,31 @@ class Profile extends Component {
     return (
       <div data-testid="page-profile">
         <Header />
-        { loading ? (
+        {loading ? (
           <Loading />
         ) : (
-          <>
-            <img
-              data-testid="profile-image"
-              src={ user.image }
-              alt={ `Imagem de perfil de ${user.name}` }
-            />
-            <div>
-              <p>
-                { user.name}
-                {' '}
-              </p>
+          <div className="App">
+            <div className="clearfix">
+              <div className="row"></div>
+              <div className="col-md-4 animated fadeIn">
+                <div className="card">
+                  <div className="card-body">
+                    <div className="avatar">
+                      <img src={user.image} className="card-img-top" alt="" />
+                    </div>
+                    <h5 className="card-title">{user.name}</h5>
+                    <p className="card-text">
+                      <Link to="/profile/edit">{"Edit Your profile"}</Link>
+                    </p>
+                    <p className="card-text">
+                      {"thanks for visiting my project =D"}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <p>
-                { user.email}
-                {' '}
-              </p>
-            </div>
-            <div>
-              <p>
-                { user.description}
-                {' '}
-              </p>
-            </div>
-            <Link to="/profile/edit">
-              Editar perfil
-            </Link>
-          </>
+          </div>
         )}
-
       </div>
     );
   }

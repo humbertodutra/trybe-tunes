@@ -66,11 +66,13 @@ class Favorites extends Component {
             <Loading />
           )
           : (
-                    
-             <div className='track-list'>
+            <section className='section-T'>
+             <div className='track-list-fav'>
+            
             {favList}
+            
             </div>
-          
+            </section>
             
           ) }
       </div>
