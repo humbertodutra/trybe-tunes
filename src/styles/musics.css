@@ -1,0 +1,54 @@
+.music-page {
+    display: flex;
+    margin: 170px 50px;
+    align-items: center;
+    
+  }
+  
+  .music-page .album-card {
+    height: 280px;
+    justify-content: space-between;
+    margin-right: 100px;
+    width: 270px;
+  }
+  
+  .track-list-section {
+    height: 25rem;
+    overflow: scroll;
+    width: 50rem;
+  }
+  
+  .track-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40%;
+    width: 50%;
+  }
+  
+  .track-section {
+    align-items: center;
+    border-top: 1px solid #e1e5eb;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .track-name {
+    margin-right: 10px;
+  }
+
+  .album-name{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .stuck {
+  margin-bottom: 120%;
+  margin-left: 200px;
+
+}
+
+.ulS {
+    background-color: lightblue;
+    overflow-y: scroll;
+}

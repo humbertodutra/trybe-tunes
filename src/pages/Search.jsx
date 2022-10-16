@@ -56,13 +56,13 @@ class Search extends Component {
 
   render() {
     const { artist, artistNameToDisplay, loading, albums, searchedArtist } = this.state;
-    
     const albumsList = albums.map((album, key) => (
     <li>
       <Link
         key={ key }
         data-testid={ `link-to-album-${album.collectionId}` }
         to={ `/album/${album.collectionId}` }
+        
       >
         <AlbumThumbnail
           name={ artistNameToDisplay }
