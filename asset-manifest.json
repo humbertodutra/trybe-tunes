@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/trybe-tunes/static/css/main.9d62b5fd.chunk.css",
-    "main.js": "/trybe-tunes/static/js/main.8b149a69.chunk.js",
-    "main.js.map": "/trybe-tunes/static/js/main.8b149a69.chunk.js.map",
+    "main.js": "/trybe-tunes/static/js/main.ad444bc9.chunk.js",
+    "main.js.map": "/trybe-tunes/static/js/main.ad444bc9.chunk.js.map",
     "runtime-main.js": "/trybe-tunes/static/js/runtime-main.62d9a489.js",
     "runtime-main.js.map": "/trybe-tunes/static/js/runtime-main.62d9a489.js.map",
-    "static/js/2.e063287e.chunk.js": "/trybe-tunes/static/js/2.e063287e.chunk.js",
-    "static/js/2.e063287e.chunk.js.map": "/trybe-tunes/static/js/2.e063287e.chunk.js.map",
+    "static/js/2.d15280b0.chunk.js": "/trybe-tunes/static/js/2.d15280b0.chunk.js",
+    "static/js/2.d15280b0.chunk.js.map": "/trybe-tunes/static/js/2.d15280b0.chunk.js.map",
     "index.html": "/trybe-tunes/index.html",
     "static/css/main.9d62b5fd.chunk.css.map": "/trybe-tunes/static/css/main.9d62b5fd.chunk.css.map",
-    "static/js/2.e063287e.chunk.js.LICENSE.txt": "/trybe-tunes/static/js/2.e063287e.chunk.js.LICENSE.txt"
+    "static/js/2.d15280b0.chunk.js.LICENSE.txt": "/trybe-tunes/static/js/2.d15280b0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.62d9a489.js",
-    "static/js/2.e063287e.chunk.js",
+    "static/js/2.d15280b0.chunk.js",
     "static/css/main.9d62b5fd.chunk.css",
-    "static/js/main.8b149a69.chunk.js"
+    "static/js/main.ad444bc9.chunk.js"
   ]
 }
