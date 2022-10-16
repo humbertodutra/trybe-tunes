@@ -1,0 +1,74 @@
+
+
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+
+.form-box h5{
+    font-size: 35px ;
+    text-align: center;
+    color: #F55A00;
+    margin: 0 0 .5vh 0;
+}
+
+.form-box{
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+    width: 30%;
+    margin-left: 35%;
+    background-color: aliceblue;
+   
+}
+.form-box label{
+    display: block;
+    margin-bottom: 50px;
+    font-size: 20px;
+    
+}
+
+.form-box input, textarea{
+    display: block;
+    
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.form-box textarea{
+    height: 15vh;
+}
+
+.form-box input{
+    display: block;
+    width: 90%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.form-box textarea{
+    display: block;
+    width: 90%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.form-box textarea{
+    height: 10vh;
+}
+
+.profile-image{
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
