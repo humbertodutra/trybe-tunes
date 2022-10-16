@@ -16,24 +16,23 @@ class Album extends Component {
       loading: true,
       musics: [],
       favsongs: [],
-      image: []
+      image: [],
     };
 
     this.toLoad = this.toLoad.bind(this);
     this.updateFavTracks = this.updateFavTracks.bind(this);
   }
-  async componentWillMount(){
+  async componentWillMount() {
     const { params } = this.props;
     const { id } = params;
     await getMusic(id)
       .then((response) => this.setState({ musics: [...response] }))
-      .then(() => this.setState( {loading: false }))
+      .then(() => this.setState({ loading: false }))
       .catch((error) => console.log(error));
     getFavoriteSongs().then((fav) => this.setState({ favsongs: [...fav] }));
-
   }
 
-  componentDidMount(){
+  componentDidMount() {
     getFavoriteSongs().then((fav) => this.setState({ favsongs: [...fav] }));
   }
 
@@ -58,9 +57,9 @@ class Album extends Component {
   render() {
     const { musics, loading, favsongs } = this.state;
     const artistName = musics.map((track) => track.artistName);
-   
+
     const albumName = musics.map((track) => track.collectionName);
-    const imgUrl = musics.map((track) => track.artworkUrl100 )
+    const imgUrl = musics.map((track) => track.artworkUrl100);
     const musicList = musics
       .slice(1)
       .map((track) => (
@@ -84,20 +83,16 @@ class Album extends Component {
         {loading && <Loading />}
 
         {musics.length > 0 && !loading && (
-          
           <div className="music-page ">
-          
-            <div className='track-list'>{musicList}</div>
-            
+            <div className="track-list">{musicList}</div>
+
             <div className="stuck">
               <AlbumThumbnail
-              name={artistName[0]}
-              img={imgUrl[0]}
-              collectionName={albumName[0]}
+                name={artistName[0]}
+                img={imgUrl[0]}
+                collectionName={albumName[0]}
               />
             </div>
-          
-            
           </div>
         )}
       </div>

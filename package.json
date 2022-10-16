@@ -1,7 +1,7 @@
 {
   "name": "trybetunes",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "engines": {
     "node": "16"
   },
@@ -16,7 +16,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://humbertodutra.github.io/trybetunes",
+  "homepage": "https://humbertodutra.github.io/trybe-tunes",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

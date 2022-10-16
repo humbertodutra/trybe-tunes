@@ -30,7 +30,7 @@ class App extends React.Component {
     const { name } = this.state;
 
     return (
-      <BrowserRouter>
+      
         <Switch>
           <Route
             exact
@@ -56,7 +56,7 @@ class App extends React.Component {
           <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route path="*" component={ NotFound } />
         </Switch>
-      </BrowserRouter>
+    
     );
   }
 }

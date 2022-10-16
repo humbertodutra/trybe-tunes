@@ -1,6 +1,6 @@
 .music-page {
     display: flex;
-    margin: 170px 50px;
+    
     align-items: center;
     
   }
@@ -21,8 +21,8 @@
   .track-list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40%;
-    width: 50%;
+    margin-bottom: 70%;
+    width: 85%;
   }
   
   .track-section {
@@ -43,9 +43,7 @@
   }
 
   .stuck {
-  margin-bottom: 100%;
-  margin-left: 200px;
-
+    margin-bottom: auto;
 }
 
 
